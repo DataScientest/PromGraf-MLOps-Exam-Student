@@ -1,0 +1,5 @@
+services:
+  evaluation:
+    build: ./src/evaluation
+    depends_on:
+      - bike-api
