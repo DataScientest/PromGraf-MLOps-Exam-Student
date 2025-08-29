@@ -48,7 +48,25 @@ class BikeSharingInput(BaseModel):
     weathersit: int = Field(..., example=1)
     dteday: datetime.date = Field(..., example="2011-01-01", description="Date of the record in YYYY-MM-DD format.")
 
+class PredictionOutput(BaseModel):
+    predicted_count: float = Field(..., example=16.0)
+
+class EvaluationData(BaseModel):
+    data: list[dict[str, Any]] = Field(..., description="List of data points, each containing features and the true target ('cnt').")
+    evaluation_period_name: str = Field("unknown_period", description="Name of the period being evaluated (e.g., 'week1_february').")
+    model_config = {'arbitrary_types_allowed': True}
+
+class EvaluationReportOutput(BaseModel):
+    message: str
+    rmse: Optional[float]
+    mape: Optional[float]
+    mae: Optional[float]
+    r2score: Optional[float]
+    drift_detected: int
+    evaluated_items: int
+
 # --- API Endpoints ---
 @app.get("/")
 async def read_root():
     return {"message": "Welcome to the Bike Sharing Predictor API. Use /predict to get bike counts or /evaluate to run drift reports."}
+
