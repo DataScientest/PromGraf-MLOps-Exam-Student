@@ -23,7 +23,7 @@
 
 Vous êtes chargé(e) de mettre en place une solution de monitoring complète pour un modèle de prédiction du nombre de vélos partagés (`cnt`) basé sur le dataset "Bike Sharing UCI". L'objectif est de garantir que les performances du modèle et les dérives des données sont constamment surveillées, visualisées et alertables, avec un accent particulier sur l'automatisation de la création des dashboards Grafana.
 
-Vous partirez d'un dépôt Git suivant :
+Vous partirez du dépôt Git suivant :
 
 ```
 https://github.com/DataScientest/PromGraf-MLOps-Exam-Student
