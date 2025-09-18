@@ -226,7 +226,7 @@ To succeed in this exam, you will need to implement the following points:
 
 *   Create a **`.tar` or `.zip` archive** of your entire project.
 *   The archive must contain all necessary files (your `docker-compose.yml`, your `src` folder, your `deployment` folder, your `makefile`, etc.).
-*   The project must contain a **`Makefile at the root** with the following targets:
+*   The project must contain a **`Makefile at the root`** with the following targets:
     *   `all`: To start all services (API, Prometheus, Grafana, Node Exporter).
     *   `stop`: To stop all services.
     *   `evaluation`: To run the `run_evaluation.py` script, which will update the metrics in Prometheus.
